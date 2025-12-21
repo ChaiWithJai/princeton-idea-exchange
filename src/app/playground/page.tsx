@@ -3,37 +3,63 @@ import CTASection from '@/components/CTASection';
 import Footer from '@/components/Footer';
 import Image from 'next/image';
 
-// Playground items matching original Framer site - staggered masonry layout
+// Complete Playground inventory - ALL 14 items
 const playgroundItems = [
   {
     title: 'Tantra & Bhakti of Hanuman',
     image: '/images/uAVzMuxreJbNlZA9NZW8StqkrA.webp',
-    size: 'tall', // Left column, tall
   },
   {
     title: "Sugriva's Atlas",
     image: '/images/Ix3P84EZD3M1XgzTyDcLtuP8E.png',
-    size: 'medium', // Center, medium height, offset down
   },
   {
     title: 'Attention is all you need',
     image: '/images/7jTFpNZDmhPAYMTo83wcMvmWITY.png',
-    size: 'square', // Right, square
   },
   {
     title: 'An Encounter with Bholenath',
     image: '/images/cAZDJDtMvh12SzPh8Nc9eFQQA.webp',
-    size: 'tall', // Left column row 2, tall
   },
   {
     title: 'AI Stack',
     image: '/images/4PSeGfWoLaYSwmokODBf7011Eg.png',
-    size: 'medium', // Center row 2
   },
   {
     title: 'Polyvagal Theory',
     image: '/images/5XRusc6uePqO8imK6sstkFHtrcU.webp',
-    size: 'square', // Right row 2
+  },
+  {
+    title: 'The Mother Goddess Society',
+    image: '/images/NNas5W5pxmLAmH9dPYD4yLiYWo.png',
+  },
+  {
+    title: 'Reverse-engineering Trauma',
+    image: '/images/96mncTpGnFgqJywBnVJwez177AU.webp',
+  },
+  {
+    title: 'AI is Your Wildcard',
+    image: '/images/FMtrLvWTU9AOreaTETgbNbKRQG4.webp',
+  },
+  {
+    title: 'The Answer is Always in The Work You\'re Avoiding',
+    image: '/images/O4pJxQXvSsWlDifoKDATUiS50o.webp',
+  },
+  {
+    title: 'AI Native Systems',
+    image: '/images/pFQc7zcbvnvE89cDSlU3a6Lndk.webp',
+  },
+  {
+    title: 'Engineering Arbitrage',
+    image: '/images/4ZDDWdmtz2iA9jVibc3ms63lY.webp',
+  },
+  {
+    title: 'Just Ship It',
+    image: '/images/SHFBLYyU6PkiPfvKh8Lwh0Z7u2U.png',
+  },
+  {
+    title: 'The Year is 2030',
+    image: '/images/KO41RA0HjXQn2nw2ObilQfTzDY.png',
   },
 ];
 
@@ -53,120 +79,34 @@ export default function PlaygroundPage() {
               </p>
             </div>
 
-            {/* Staggered Masonry Grid - matching original Framer layout */}
+            {/* Staggered Masonry Grid - 3 columns with varying heights */}
             <div className="max-w-6xl mx-auto px-4">
-              {/* Row 1 */}
-              <div className="flex flex-col md:flex-row gap-6 mb-6 items-start">
-                {/* Left - Tall card */}
-                <div className="w-full md:w-1/3 group relative rounded-2xl overflow-hidden shadow-lg cursor-pointer">
-                  <div className="relative h-[500px]">
-                    <Image
-                      src={playgroundItems[0].image}
-                      alt={playgroundItems[0].title}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-                    <div className="absolute top-4 left-4 right-4">
-                      <h3 className="text-white text-lg font-serif italic drop-shadow-lg">
-                        {playgroundItems[0].title}
-                      </h3>
-                    </div>
-                  </div>
-                </div>
+              <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
+                {playgroundItems.map((item, index) => {
+                  // Vary heights for visual interest
+                  const heights = ['h-[380px]', 'h-[320px]', 'h-[440px]', 'h-[360px]', 'h-[400px]'];
+                  const height = heights[index % heights.length];
 
-                {/* Center - Medium card, offset down */}
-                <div className="w-full md:w-1/3 md:mt-24 group relative rounded-2xl overflow-hidden shadow-lg cursor-pointer">
-                  <div className="relative h-[380px]">
-                    <Image
-                      src={playgroundItems[1].image}
-                      alt={playgroundItems[1].title}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-                    <div className="absolute top-4 left-4 right-4">
-                      <h3 className="text-white text-lg font-serif italic drop-shadow-lg">
-                        {playgroundItems[1].title}
-                      </h3>
+                  return (
+                    <div
+                      key={index}
+                      className={`group relative rounded-2xl overflow-hidden shadow-lg cursor-pointer break-inside-avoid mb-6 ${height}`}
+                    >
+                      <Image
+                        src={item.image}
+                        alt={item.title}
+                        fill
+                        className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                      <div className="absolute top-4 left-4 right-4">
+                        <h3 className="text-white text-lg font-serif italic drop-shadow-lg">
+                          {item.title}
+                        </h3>
+                      </div>
                     </div>
-                  </div>
-                </div>
-
-                {/* Right - Square card */}
-                <div className="w-full md:w-1/3 group relative rounded-2xl overflow-hidden shadow-lg cursor-pointer">
-                  <div className="relative h-[320px]">
-                    <Image
-                      src={playgroundItems[2].image}
-                      alt={playgroundItems[2].title}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-                    <div className="absolute top-4 left-4 right-4">
-                      <h3 className="text-white text-lg font-serif italic drop-shadow-lg">
-                        {playgroundItems[2].title}
-                      </h3>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Row 2 */}
-              <div className="flex flex-col md:flex-row gap-6 items-start">
-                {/* Left - Tall card */}
-                <div className="w-full md:w-1/3 group relative rounded-2xl overflow-hidden shadow-lg cursor-pointer">
-                  <div className="relative h-[480px]">
-                    <Image
-                      src={playgroundItems[3].image}
-                      alt={playgroundItems[3].title}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-                    <div className="absolute top-4 left-4 right-4">
-                      <h3 className="text-white text-lg font-serif italic drop-shadow-lg">
-                        {playgroundItems[3].title}
-                      </h3>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Center - Medium card, offset down */}
-                <div className="w-full md:w-1/3 md:mt-16 group relative rounded-2xl overflow-hidden shadow-lg cursor-pointer">
-                  <div className="relative h-[300px]">
-                    <Image
-                      src={playgroundItems[4].image}
-                      alt={playgroundItems[4].title}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-                    <div className="absolute top-4 left-4 right-4">
-                      <h3 className="text-white text-lg font-serif italic drop-shadow-lg">
-                        {playgroundItems[4].title}
-                      </h3>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Right - Square card, offset more */}
-                <div className="w-full md:w-1/3 md:mt-28 group relative rounded-2xl overflow-hidden shadow-lg cursor-pointer">
-                  <div className="relative h-[320px]">
-                    <Image
-                      src={playgroundItems[5].image}
-                      alt={playgroundItems[5].title}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-                    <div className="absolute top-4 left-4 right-4">
-                      <h3 className="text-white text-lg font-serif italic drop-shadow-lg">
-                        {playgroundItems[5].title}
-                      </h3>
-                    </div>
-                  </div>
-                </div>
+                  );
+                })}
               </div>
             </div>
 

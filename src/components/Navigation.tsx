@@ -7,7 +7,7 @@ export default function Navigation() {
   const pathname = usePathname();
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 py-6 px-6 md:px-12">
+    <nav className="fixed top-0 left-0 right-0 z-50 py-6 px-6 md:px-12 bg-[var(--color-cream)]/80 backdrop-blur-md">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Works Link */}
         <Link
