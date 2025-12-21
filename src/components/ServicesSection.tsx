@@ -22,7 +22,7 @@ export default function ServicesSection() {
                 {[...services, ...services].map((service, index) => (
                   <span
                     key={index}
-                    className="flex-shrink-0 text-base text-[var(--color-gray)] font-medium py-2 px-4 rounded-full border border-[var(--color-gray)]/20 whitespace-nowrap"
+                    className="flex-shrink-0 bg-[var(--color-navy)] text-white text-sm font-medium py-2.5 px-5 rounded-full whitespace-nowrap"
                   >
                     {service}
                   </span>
@@ -35,7 +35,7 @@ export default function ServicesSection() {
               {services.map((service, index) => (
                 <span
                   key={index}
-                  className="text-lg text-[var(--color-gray)] font-medium py-2 px-5 rounded-full border border-[var(--color-gray)]/20 hover:border-[var(--color-orange)] hover:text-[var(--color-orange)] hover:bg-[var(--color-orange)]/5 transition-all duration-300 cursor-default"
+                  className="bg-[var(--color-navy)] text-white text-base font-medium py-3 px-6 rounded-full hover:bg-[var(--color-orange)] transition-all duration-300 cursor-default"
                 >
                   {service}
                 </span>

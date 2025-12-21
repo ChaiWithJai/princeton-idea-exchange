@@ -63,7 +63,7 @@ export default function TeamSection() {
               </div>
               {/* Name Badge - Blue pill */}
               <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-[#1e3a5f] text-white px-4 py-2 rounded-full text-sm whitespace-nowrap shadow-lg">
-                Jai (Full-Stack GTM Engineer)
+                Jai (Agent Engineer)
               </div>
             </div>
           </div>
