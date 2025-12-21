@@ -1,9 +1,4 @@
-'use client';
-
-import { useEffect, useState } from 'react';
 import Image from 'next/image';
-
-const words = ['legacy', 'businesses', 'can', 'count', 'on!'];
 
 // 4 corner images matching original - rounded corners, tilted
 const cornerImages = [
@@ -38,45 +33,6 @@ const cornerImages = [
 ];
 
 export default function Hero() {
-  const [visibleChars, setVisibleChars] = useState(0);
-  const fullText = words.join(' ');
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setVisibleChars((prev) => {
-        if (prev >= fullText.length) {
-          clearInterval(interval);
-          return prev;
-        }
-        return prev + 1;
-      });
-    }, 50);
-
-    return () => clearInterval(interval);
-  }, [fullText.length]);
-
-  const renderAnimatedText = () => {
-    let charIndex = 0;
-    return words.map((word, wordIndex) => (
-      <span key={wordIndex} className="inline-block mr-2 md:mr-3">
-        {word.split('').map((char, i) => {
-          const isVisible = charIndex < visibleChars;
-          charIndex++;
-          return (
-            <span
-              key={i}
-              className={`inline-block transition-all duration-200 ${
-                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'
-              }`}
-            >
-              {char}
-            </span>
-          );
-        })}
-      </span>
-    ));
-  };
-
   return (
     <section className="min-h-screen pt-20 pb-8 px-4 relative overflow-hidden">
       {/* Corner Images - Rounded, Tilted */}
@@ -113,25 +69,23 @@ export default function Hero() {
 
         {/* Main Headline */}
         <h1 className="mb-4 md:mb-6">
-          <span className="block">AI Strategy</span>
-          <span className="block">Consultants</span>
+          <span className="block">Ship AI.</span>
+          <span className="block">This Weekend.</span>
         </h1>
 
-        {/* Animated Subtext */}
-        <p className="text-lg md:text-xl text-[var(--color-gray)] mb-8 md:mb-10 h-8 font-serif italic">
-          {renderAnimatedText()}
+        {/* Subhead */}
+        <p className="text-lg md:text-xl text-[var(--color-gray)] mb-8 md:mb-10 font-serif italic">
+          Stop learning about AI. Start working with AI.
         </p>
 
         {/* CTA Button */}
         <a
-          href="https://maven.com/p/c26881/the-gtm-paradox-why-copying-the-winners-makes-you-lose"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="#works"
           className="btn-primary text-base md:text-lg inline-flex items-center gap-2"
         >
-          Get This Month&apos;s Report
+          See Our Work
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7v10" />
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
           </svg>
         </a>
       </div>

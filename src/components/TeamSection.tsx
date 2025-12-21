@@ -25,17 +25,16 @@ export default function TeamSection() {
         <div className="text-center max-w-3xl mx-auto mb-12">
           <h2 className="text-white mb-4 md:mb-6">Behind the curtain</h2>
           <p className="text-gray-300 mb-6 text-base md:text-lg">
-            Meet the strategists passionate about helping legacy businesses succeed, with a quick peek into our world
+            No pretty pixels. No 90-day strategy decks.
           </p>
           <div className="space-y-4 text-gray-400 text-sm md:text-base">
             <p>
-              We&apos;re not in the business of designing &quot;pretty pixels.&quot; We build GTM
-              engineered systems that turn a founder&apos;s big idea into fundable proof.
-              Sometimes that looks like an MVP investors can&apos;t ignore; other times
-              it&apos;s a pitch deck that closes the round.
+              We build MVPs that get funded and demos that close deals.
+              Theramotive secured $320K in seed funding. QEDC shipped curriculum
+              that gets entrepreneurs from stuck to shipping in weeks.
             </p>
             <p className="font-medium text-white">
-              Either way, the work has to work.
+              The work has to work.
             </p>
           </div>
           <a

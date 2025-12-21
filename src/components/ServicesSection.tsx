@@ -4,14 +4,9 @@ import Image from 'next/image';
 
 const services = [
   'GTM Engineering',
-  'Branding',
-  'System Audit',
-  'User Interface Design',
-  'Competitive Intelligence',
-  'User Experience Design',
-  'User Research',
-  'Campaign Design',
-  'Design Systems',
+  'AI Prototyping',
+  'Fundable MVPs',
+  'Pitch Engineering',
 ];
 
 export default function ServicesSection() {
@@ -62,10 +57,10 @@ export default function ServicesSection() {
             </div>
             <h2 className="mb-4 md:mb-6">What we bring to the table</h2>
             <p className="text-[var(--color-gray)] text-base md:text-lg leading-relaxed">
-              Designing strategy to help you meet the moment.
+              Most consultants give you a deck. We give you a demo.
               <br />
               <span className="font-semibold text-[var(--color-dark)]">
-                We focus on action, not theory.
+                Working prototypes. Fundable MVPs. Shipped in weeks.
               </span>
             </p>
           </div>
