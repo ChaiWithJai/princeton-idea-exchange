@@ -1,22 +1,38 @@
 import type { Metadata } from "next";
+import { DM_Sans, Libre_Baskerville } from "next/font/google";
 import "./globals.css";
 
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  variable: "--font-sans",
+  display: "swap",
+  weight: ["400", "500", "600", "700"],
+});
+
+const libreBaskerville = Libre_Baskerville({
+  subsets: ["latin"],
+  variable: "--font-serif",
+  display: "swap",
+  weight: ["400", "700"],
+  style: ["normal", "italic"],
+});
+
 export const metadata: Metadata = {
-  title: "Princeton Idea Exchange | AI Strategy Consultants",
-  description: "AI Strategy Consultants helping legacy businesses count on. We design campaigns that drive long-term value through GTM engineering, branding, and AI-powered solutions.",
-  keywords: ["AI Strategy", "GTM Engineering", "Business Consulting", "Startup Consulting", "Princeton Idea Exchange"],
-  authors: [{ name: "Princeton Idea Exchange" }],
+  title: "Princeton Idea Exchange | Ship AI. This Weekend.",
+  description: "Stop learning about AI. Start working with AI. We build fundable MVPs, working prototypes, and ship them in weeks.",
+  keywords: ["AI Agent Engineering", "MVP Development", "AI Prototyping", "Fundable MVPs", "Princeton Idea Exchange"],
+  authors: [{ name: "Jai Bhagat" }],
   openGraph: {
-    title: "Princeton Idea Exchange | AI Strategy Consultants",
-    description: "AI Strategy Consultants helping legacy businesses count on.",
+    title: "Princeton Idea Exchange | Ship AI. This Weekend.",
+    description: "Most consultants give you a deck. We give you a demo. Working prototypes. Fundable MVPs. Shipped in weeks.",
     type: "website",
     locale: "en_US",
     siteName: "Princeton Idea Exchange",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Princeton Idea Exchange | AI Strategy Consultants",
-    description: "AI Strategy Consultants helping legacy businesses count on.",
+    title: "Princeton Idea Exchange | Ship AI. This Weekend.",
+    description: "Most consultants give you a deck. We give you a demo.",
   },
 };
 
@@ -26,7 +42,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${dmSans.variable} ${libreBaskerville.variable}`}>
       <body className="antialiased">
         {children}
       </body>

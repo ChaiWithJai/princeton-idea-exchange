@@ -1,6 +1,3 @@
-/* Google Fonts - must be first */
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
-
 @import "tailwindcss";
 
 :root {
@@ -11,22 +8,24 @@
   /* Colors - Refined palette */
   --color-cream: #faf9f7;
   --color-cream-dark: #f0eeeb;
-  --color-orange: #e85a1c;
-  --color-orange-hover: #d14d12;
+  --color-orange: #c74a15;
+  --color-orange-hover: #a83d10;
   --color-navy: #0f1d3d;
   --color-navy-light: #1e3a5f;
   --color-dark: #1a1a1a;
-  --color-gray-900: #2a2a2a;
-  --color-gray-700: #4a4a4a;
-  --color-gray-500: #6b6b6b;
-  --color-gray-400: #8a8a8a;
-  --color-gray-300: #b0b0b0;
+  /* Grays - WCAG AA compliant (4.5:1 min on cream background) */
+  --color-gray-900: #1f1f1f;
+  --color-gray-700: #3d3d3d;
+  --color-gray-600: #525252;
+  --color-gray-500: #525252;
+  --color-gray-400: #616161;
+  --color-gray-300: #9a9a9a;
   --color-gray-200: #d4d4d4;
   --color-gray-100: #e8e8e8;
 
-  /* Legacy aliases */
-  --color-gray: #6b6b6b;
-  --color-light-gray: #8a8a8a;
+  /* Legacy aliases - now accessible */
+  --color-gray: #525252;
+  --color-light-gray: #616161;
 
   /* Fonts */
   --font-serif: 'Libre Baskerville', Georgia, serif;
@@ -67,11 +66,11 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-cream: #faf9f7;
-  --color-orange: #e85a1c;
+  --color-orange: #c74a15;
   --color-navy: #0f1d3d;
   --color-dark: #1a1a1a;
-  --color-gray: #6b6b6b;
-  --color-light-gray: #8a8a8a;
+  --color-gray: #525252;
+  --color-light-gray: #616161;
 
   --font-serif: 'Libre Baskerville', Georgia, serif;
   --font-sans: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -101,7 +100,7 @@ body {
 h1, h2, h3 {
   font-family: var(--font-serif);
   font-style: italic;
-  color: var(--color-navy);
+  /* Color set by Tailwind classes to allow dark/light backgrounds */
   line-height: 1.15;
   letter-spacing: -0.02em;
 }
@@ -125,7 +124,7 @@ h4 {
   font-family: var(--font-serif);
   font-style: italic;
   font-size: 1.25rem;
-  color: var(--color-navy);
+  /* Color set by Tailwind classes to allow dark/light backgrounds */
   line-height: 1.3;
   letter-spacing: -0.01em;
 }
@@ -134,7 +133,7 @@ h5 {
   font-family: var(--font-sans);
   font-weight: 600;
   font-size: 1.125rem;
-  color: var(--foreground);
+  /* Color set by Tailwind classes to allow dark/light backgrounds */
   line-height: 1.4;
   letter-spacing: -0.01em;
 }

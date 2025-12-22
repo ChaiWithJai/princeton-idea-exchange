@@ -1,0 +1,353 @@
+{
+  "statistics": {
+    "detectionDate": "2025-12-21T23:04:50.094Z",
+    "formats": {
+      "javascript": {
+        "sources": {
+          "src/components/WorkCard.tsx": {
+            "lines": 31,
+            "tokens": 193,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/components/Testimonials.tsx": {
+            "lines": 41,
+            "tokens": 294,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/components/TeamSection.tsx": {
+            "lines": 8,
+            "tokens": 25,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/components/ServicesSection.tsx": {
+            "lines": 13,
+            "tokens": 80,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/components/Navigation.tsx": {
+            "lines": 26,
+            "tokens": 135,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/components/Hero.tsx": {
+            "lines": 46,
+            "tokens": 345,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/components/FeaturedWorks.tsx": {
+            "lines": 94,
+            "tokens": 601,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/components/CTASection.tsx": {
+            "lines": 21,
+            "tokens": 129,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/components/ActionSection.tsx": {
+            "lines": 0,
+            "tokens": 3,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          }
+        },
+        "total": {
+          "lines": 280,
+          "tokens": 1805,
+          "sources": 9,
+          "clones": 0,
+          "duplicatedLines": 0,
+          "duplicatedTokens": 0,
+          "percentage": 0,
+          "percentageTokens": 0,
+          "newDuplicatedLines": 0,
+          "newClones": 0
+        }
+      },
+      "tsx": {
+        "sources": {
+          "src/components/WorkCard.tsx": {
+            "lines": 56,
+            "tokens": 349,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/components/Testimonials.tsx": {
+            "lines": 98,
+            "tokens": 665,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/components/TeamSection.tsx": {
+            "lines": 73,
+            "tokens": 505,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/components/ServicesSection.tsx": {
+            "lines": 70,
+            "tokens": 479,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/components/Navigation.tsx": {
+            "lines": 47,
+            "tokens": 256,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/components/Hero.tsx": {
+            "lines": 93,
+            "tokens": 637,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/components/Footer.tsx": {
+            "lines": 23,
+            "tokens": 167,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/components/FeaturedWorks.tsx": {
+            "lines": 155,
+            "tokens": 979,
+            "sources": 1,
+            "clones": 4,
+            "duplicatedLines": 54,
+            "duplicatedTokens": 352,
+            "percentage": 34.84,
+            "percentageTokens": 35.96,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/components/CTASection.tsx": {
+            "lines": 76,
+            "tokens": 476,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "src/components/ActionSection.tsx": {
+            "lines": 42,
+            "tokens": 325,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          }
+        },
+        "total": {
+          "lines": 733,
+          "tokens": 4838,
+          "sources": 10,
+          "clones": 2,
+          "duplicatedLines": 27,
+          "duplicatedTokens": 176,
+          "percentage": 3.68,
+          "percentageTokens": 3.64,
+          "newDuplicatedLines": 0,
+          "newClones": 0
+        }
+      }
+    },
+    "total": {
+      "lines": 1013,
+      "tokens": 6643,
+      "sources": 19,
+      "clones": 2,
+      "duplicatedLines": 27,
+      "duplicatedTokens": 176,
+      "percentage": 2.67,
+      "percentageTokens": 2.65,
+      "newDuplicatedLines": 0,
+      "newClones": 0
+    }
+  },
+  "duplicates": [
+    {
+      "format": "tsx",
+      "lines": 16,
+      "fragment": "}\n          <Link\n            href={carouselItems[2].href}\n            className=\"relative w-40 h-64 md:w-48 md:h-80 flex-shrink-0 rounded-xl overflow-hidden shadow-lg transition-all duration-500 hover:scale-105 group\"\n          >\n            <Image\n              src={carouselItems[2].image}\n              alt={carouselItems[2].title}\n              fill\n              className=\"object-cover\"\n              sizes=\"192px\"\n            />\n            <div className=\"absolute inset-0 bg-gradient-to-t from-black/50 to-transparent\" />\n            <div className=\"absolute top-3 left-3 right-3\">\n              <p className=\"text-white text-sm font-serif italic drop-shadow-lg\">\n                {carouselItems[2",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src/components/FeaturedWorks.tsx",
+        "start": 104,
+        "end": 119,
+        "startLoc": {
+          "line": 104,
+          "column": 24,
+          "position": 655
+        },
+        "endLoc": {
+          "line": 119,
+          "column": 2,
+          "position": 760
+        }
+      },
+      "secondFile": {
+        "name": "src/components/FeaturedWorks.tsx",
+        "start": 64,
+        "end": 79,
+        "startLoc": {
+          "line": 64,
+          "column": 23,
+          "position": 395
+        },
+        "endLoc": {
+          "line": 79,
+          "column": 2,
+          "position": 500
+        }
+      }
+    },
+    {
+      "format": "tsx",
+      "lines": 13,
+      "fragment": "}\n          <div className=\"hidden md:block w-20 h-72 flex-shrink-0 opacity-40\">\n            <div className=\"relative w-full h-full rounded-xl overflow-hidden bg-gray-200\">\n              <Image\n                src={carouselItems[0].image}\n                alt=\"\"\n                fill\n                className=\"object-cover\"\n                sizes=\"80px\"\n              />\n            </div>\n          </div>\n        </",
+      "tokens": 0,
+      "firstFile": {
+        "name": "src/components/FeaturedWorks.tsx",
+        "start": 124,
+        "end": 136,
+        "startLoc": {
+          "line": 124,
+          "column": 25,
+          "position": 785
+        },
+        "endLoc": {
+          "line": 136,
+          "column": 3,
+          "position": 856
+        }
+      },
+      "secondFile": {
+        "name": "src/components/FeaturedWorks.tsx",
+        "start": 51,
+        "end": 64,
+        "startLoc": {
+          "line": 51,
+          "column": 24,
+          "position": 321
+        },
+        "endLoc": {
+          "line": 64,
+          "column": 2,
+          "position": 393
+        }
+      }
+    }
+  ]
+}

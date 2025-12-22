@@ -1,5 +1,3 @@
-'use client';
-
 import Image from 'next/image';
 
 const testimonials = [
@@ -35,7 +33,7 @@ export default function Testimonials() {
   return (
     <section className="py-16 md:py-20">
       <div className="container">
-        <h2 className="text-center mb-10 md:mb-12">Kind words from Clients</h2>
+        <h2 className="text-center mb-10 md:mb-12 text-[var(--color-navy)]">Kind words from Clients</h2>
 
         {/* Testimonials Grid */}
         <div className="grid md:grid-cols-3 gap-6 md:gap-8 mb-16 md:mb-20">

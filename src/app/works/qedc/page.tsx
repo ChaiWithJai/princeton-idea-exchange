@@ -14,7 +14,7 @@ export default function QEDCPage() {
         <article className="container py-12">
           {/* Header */}
           <header className="mb-12">
-            <h1 className="mb-6">Creating Effective Curriculum for QEDC</h1>
+            <h1 className="mb-6 text-[var(--color-navy)]">Creating Effective Curriculum for QEDC</h1>
             <p className="text-[var(--color-gray)] text-lg mb-6 max-w-3xl">
               We partnered with QEDC to design AI-powered curriculum for
               resource-constrained entrepreneurs, helping them move from &quot;stuck
@@ -48,7 +48,7 @@ export default function QEDCPage() {
               <strong>Project:</strong> AI Adoption for Entrepreneurs - 8-Week Accelerator Program
             </p>
 
-            <h5 className="mt-10 mb-4">The Challenge</h5>
+            <h5 className="mt-10 mb-4 text-[var(--color-dark)]">The Challenge</h5>
             <p className="text-[var(--color-gray)]">
               QEDC approached with a critical workforce development need: their
               entrepreneurial community (primarily over-35 founders juggling side hustles
@@ -78,7 +78,7 @@ export default function QEDCPage() {
               weeks, entirely online.
             </p>
 
-            <h5 className="mt-10 mb-4">The Solution</h5>
+            <h5 className="mt-10 mb-4 text-[var(--color-dark)]">The Solution</h5>
             <p className="text-[var(--color-gray)]">
               Jai designed and taught a pedagogically rigorous accelerator that functioned
               as both a skills incubator and a business transformation lab. Rather than
@@ -110,7 +110,7 @@ export default function QEDCPage() {
               </li>
             </ul>
 
-            <h5 className="mt-10 mb-4">The Results</h5>
+            <h5 className="mt-10 mb-4 text-[var(--color-dark)]">The Results</h5>
             <p className="text-[var(--color-gray)]">
               The 8-week program transformed not just skills but mindsets, creating a
               cohort of AI-native entrepreneurs who could outcompete larger, better-funded

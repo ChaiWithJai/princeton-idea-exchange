@@ -1,154 +1,95 @@
-'use client';
-
 import Image from 'next/image';
 import Link from 'next/link';
-import { useState } from 'react';
 
-// Playground items - same content as carousel
-const carouselItems = [
+const explorations = [
   {
     title: 'An Encounter with Bholenath',
+    subtitle: 'Dissolving the Self',
     image: '/images/cAZDJDtMvh12SzPh8Nc9eFQQA.webp',
     href: '/playground',
   },
   {
     title: 'Tantra & Bhakti of Hanuman',
+    subtitle: 'Devotion as Technology',
     image: '/images/uAVzMuxreJbNlZA9NZW8StqkrA.webp',
     href: '/playground',
   },
   {
-    title: 'Sugriva\'s Atlas',
+    title: "Sugriva's Atlas",
+    subtitle: 'Mapping the Unknown',
     image: '/images/Ix3P84EZD3M1XgzTyDcLtuP8E.png',
     href: '/playground',
   },
 ];
 
 export default function FeaturedWorks() {
-  const [currentPage, setCurrentPage] = useState(0);
-
   return (
-    <section className="py-12 md:py-16 overflow-hidden">
-      {/* Telescope Icon */}
-      <div className="flex justify-center mb-4">
-        <div className="relative w-16 h-16">
-          <Image
-            src="/images/fzdMmD8GaUvrvUMOv63oXQwfeo.png"
-            alt="Telescope"
-            fill
-            className="object-contain"
-            sizes="64px"
-          />
-        </div>
-      </div>
-
-      <div className="container mb-8">
-        <h2 className="text-center">Sneak peak of our works</h2>
-      </div>
-
-      {/* 3D Carousel - Center card larger */}
-      <div className="relative max-w-6xl mx-auto px-4">
-        <div className="flex items-center justify-center gap-4 md:gap-6">
-          {/* Left partial card */}
-          <div className="hidden md:block w-20 h-72 flex-shrink-0 opacity-40">
-            <div className="relative w-full h-full rounded-xl overflow-hidden bg-gray-200">
-              <Image
-                src={carouselItems[2].image}
-                alt=""
-                fill
-                className="object-cover"
-                sizes="80px"
-              />
-            </div>
-          </div>
-
-          {/* Side card - left */}
-          <Link
-            href={carouselItems[0].href}
-            className="relative w-40 h-64 md:w-48 md:h-80 flex-shrink-0 rounded-xl overflow-hidden shadow-lg transition-all duration-500 hover:scale-105 group"
-          >
-            <Image
-              src={carouselItems[0].image}
-              alt={carouselItems[0].title}
-              fill
-              className="object-cover"
-              sizes="192px"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-            <div className="absolute top-3 left-3 right-3">
-              <p className="text-white text-sm font-serif italic drop-shadow-lg">
-                {carouselItems[0].title}
-              </p>
-            </div>
-          </Link>
-
-          {/* Center card - LARGER */}
-          <Link
-            href={carouselItems[1].href}
-            className="relative w-52 h-80 md:w-64 md:h-96 flex-shrink-0 rounded-xl overflow-hidden shadow-2xl transition-all duration-500 hover:scale-105 z-10 group"
-          >
-            <Image
-              src={carouselItems[1].image}
-              alt={carouselItems[1].title}
-              fill
-              className="object-cover"
-              sizes="256px"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-            <div className="absolute top-4 left-4 right-4">
-              <p className="text-white text-base md:text-lg font-serif italic drop-shadow-lg">
-                {carouselItems[1].title}
-              </p>
-            </div>
-          </Link>
-
-          {/* Side card - right */}
-          <Link
-            href={carouselItems[2].href}
-            className="relative w-40 h-64 md:w-48 md:h-80 flex-shrink-0 rounded-xl overflow-hidden shadow-lg transition-all duration-500 hover:scale-105 group"
-          >
-            <Image
-              src={carouselItems[2].image}
-              alt={carouselItems[2].title}
-              fill
-              className="object-cover"
-              sizes="192px"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-            <div className="absolute top-3 left-3 right-3">
-              <p className="text-white text-sm font-serif italic drop-shadow-lg">
-                {carouselItems[2].title}
-              </p>
-            </div>
-          </Link>
-
-          {/* Right partial card */}
-          <div className="hidden md:block w-20 h-72 flex-shrink-0 opacity-40">
-            <div className="relative w-full h-full rounded-xl overflow-hidden bg-gray-200">
-              <Image
-                src={carouselItems[0].image}
-                alt=""
-                fill
-                className="object-cover"
-                sizes="80px"
-              />
-            </div>
-          </div>
+    <section className="py-20 md:py-28 bg-[#141414] text-white relative overflow-hidden">
+      <div className="container relative z-10">
+        {/* Header */}
+        <div className="text-center mb-12 md:mb-16">
+          <p className="text-xs tracking-[0.25em] uppercase text-[#c74a15] font-semibold mb-3">
+            The Playground
+          </p>
+          <h2 className="text-white mb-5">
+            Models of Understanding
+          </h2>
+          <p className="text-[#b3b3b3] max-w-2xl mx-auto text-base md:text-lg leading-relaxed">
+            Deep explorations where Eastern philosophy meets computational thinking.
+            Each piece is a framework for seeing differently.
+          </p>
         </div>
 
-        {/* Page Dot Indicators */}
-        <div className="flex justify-center gap-3 mt-8">
-          {[0, 1].map((index) => (
-            <button
+        {/* Explorations Grid - Clean cards, no overlay on images */}
+        <div className="grid md:grid-cols-3 gap-4 md:gap-6 mb-12">
+          {explorations.map((item, index) => (
+            <Link
               key={index}
-              onClick={() => setCurrentPage(index)}
-              className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
-                currentPage === index
-                  ? 'bg-[var(--color-dark)]'
-                  : 'bg-[var(--color-gray)]/30 hover:bg-[var(--color-gray)]/50'
-              }`}
-              aria-label={`Go to page ${index + 1}`}
-            />
+              href={item.href}
+              className="group block"
+            >
+              <div className="relative rounded-lg overflow-hidden bg-[#1a1a1a] transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl">
+                {/* Image - NO overlay */}
+                <div className="relative aspect-[3/4] overflow-hidden">
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                  />
+                </div>
+
+                {/* Content - Below image, not overlapping */}
+                <div className="p-4 md:p-5 bg-[#1a1a1a]">
+                  <p className="text-[10px] md:text-xs tracking-[0.15em] uppercase text-[#c74a15] font-semibold mb-1">
+                    {item.subtitle}
+                  </p>
+                  <h4 className="text-white text-base md:text-lg font-semibold leading-tight group-hover:text-[#c74a15] transition-colors">
+                    {item.title}
+                  </h4>
+                </div>
+              </div>
+            </Link>
           ))}
+        </div>
+
+        {/* CTA */}
+        <div className="text-center">
+          <Link
+            href="/playground"
+            className="inline-flex items-center gap-3 text-white hover:text-[#c74a15] transition-colors group text-sm font-medium"
+          >
+            <span>Explore all 14 pieces</span>
+            <svg
+              className="w-4 h-4 transition-transform group-hover:translate-x-1"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </Link>
         </div>
       </div>
     </section>

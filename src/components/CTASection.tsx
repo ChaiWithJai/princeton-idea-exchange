@@ -34,7 +34,7 @@ export default function CTASection() {
           </div>
         </div>
 
-        <h2 className="mb-4">Ready to ship?</h2>
+        <h2 className="mb-4 text-[var(--color-navy)]">Ready to ship?</h2>
         <p className="text-[var(--color-gray)] text-lg mb-10">
           Stop learning about AI. Start working with AI.
         </p>

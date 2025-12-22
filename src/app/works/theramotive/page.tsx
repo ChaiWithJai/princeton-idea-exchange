@@ -14,7 +14,7 @@ export default function TheramotivePage() {
         <article className="container py-12">
           {/* Header */}
           <header className="mb-12">
-            <h1 className="mb-6">How Theramotive Built Fundable IP Fast</h1>
+            <h1 className="mb-6 text-[var(--color-navy)]">How Theramotive Built Fundable IP Fast</h1>
             <p className="text-[var(--color-gray)] text-lg mb-6 max-w-3xl">
               With just one week to mobilize 20 inexperienced interns, we built
               Theramotive a functioning engineering system that delivered a validated
@@ -48,7 +48,7 @@ export default function TheramotivePage() {
               <strong>Project:</strong> AI-Powered Medical Billing Workflow & Team Incubation
             </p>
 
-            <h5 className="mt-10 mb-4">The Challenge</h5>
+            <h5 className="mt-10 mb-4 text-[var(--color-dark)]">The Challenge</h5>
             <p className="text-[var(--color-gray)]">
               Founder Lola approached cashisclay.com with an urgent and complex problem:
               she had a team of <strong>20 inexperienced college interns starting in one week</strong>{' '}
@@ -70,7 +70,7 @@ export default function TheramotivePage() {
               </li>
             </ul>
 
-            <h5 className="mt-10 mb-4">The Solution</h5>
+            <h5 className="mt-10 mb-4 text-[var(--color-dark)]">The Solution</h5>
             <p className="text-[var(--color-gray)]">
               Jai Bhagat and the cashisclay.com team implemented a full-scale operating
               system for Theramotive&apos;s new engineering organization. The approach was
@@ -96,7 +96,7 @@ export default function TheramotivePage() {
               </li>
             </ul>
 
-            <h5 className="mt-10 mb-4">The Results</h5>
+            <h5 className="mt-10 mb-4 text-[var(--color-dark)]">The Results</h5>
             <p className="text-[var(--color-gray)]">
               By transforming a group of interns into a cohesive, productive engineering
               unit, Theramotive achieved in weeks what would typically take quarters.

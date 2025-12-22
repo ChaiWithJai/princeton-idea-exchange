@@ -1,5 +1,3 @@
-'use client';
-
 import Image from 'next/image';
 
 const services = [
@@ -55,7 +53,7 @@ export default function ServicesSection() {
                 sizes="64px"
               />
             </div>
-            <h2 className="mb-4 md:mb-6">What we bring to the table</h2>
+            <h2 className="mb-4 md:mb-6 text-[var(--color-navy)]">What we bring to the table</h2>
             <p className="text-[var(--color-gray)] text-base md:text-lg leading-relaxed">
               Most consultants give you a deck. We give you a demo.
               <br />

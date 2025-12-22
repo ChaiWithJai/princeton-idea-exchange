@@ -25,7 +25,7 @@ export default function ActionSection() {
       <div className="container">
         {/* Section Header */}
         <div className="mb-12">
-          <h2 className="mb-4">Action, not strategy</h2>
+          <h2 className="mb-4 text-[var(--color-navy)]">Action, not strategy</h2>
           <p className="text-[var(--color-gray)] text-lg">
             Real results from founders who shipped, not just planned.
           </p>

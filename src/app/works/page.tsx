@@ -31,7 +31,7 @@ export default function WorksPage() {
           <div className="container">
             {/* Page Header */}
             <div className="mb-12">
-              <h1 className="mb-4">Works</h1>
+              <h1 className="mb-4 text-[var(--color-navy)]">Works</h1>
               <p className="text-[var(--color-gray)] text-lg">
                 Designing campaigns that drive long-term value.
               </p>
