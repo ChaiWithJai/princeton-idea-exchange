@@ -3,6 +3,7 @@ import CTASection from '@/components/CTASection';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
 import Image from 'next/image';
+import Script from 'next/script';
 import { notFound } from 'next/navigation';
 import {
   getStudioBySlug,
@@ -92,6 +93,53 @@ function ArrowRightIcon() {
     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
     </svg>
+  );
+}
+
+// Studios with cinematic hero images (Ray/Chaplin inspired)
+const CINEMATIC_HERO_STUDIOS = ['kvibe', 'loop', 'sip', 'ironbound'];
+
+function HeroImage({ studio }: { studio: StudioData }) {
+  const hasCinematicHero = CINEMATIC_HERO_STUDIOS.includes(studio.slug);
+
+  if (hasCinematicHero) {
+    return (
+      <div className="relative group">
+        {/* Cinematic Hero Image */}
+        <div className="aspect-[4/3] lg:aspect-square rounded-2xl overflow-hidden shadow-2xl border border-gray-200/50">
+          <Image
+            src={`/studios/${studio.slug}-hero.png`}
+            alt={`${studio.name} - Cinematic Studio Portrait`}
+            fill
+            className="object-cover transition-transform duration-700 group-hover:scale-105"
+            sizes="(max-width: 1024px) 100vw, 50vw"
+            priority
+          />
+          {/* Subtle orange gradient overlay for brand connection */}
+          <div className="absolute inset-0 bg-gradient-to-tr from-[var(--color-orange)]/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        </div>
+        {/* Film grain effect */}
+        <div className="absolute inset-0 rounded-2xl pointer-events-none opacity-20 mix-blend-overlay bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIj48ZmlsdGVyIGlkPSJhIj48ZmVUdXJidWxlbmNlIHR5cGU9ImZyYWN0YWxOb2lzZSIgYmFzZUZyZXF1ZW5jeT0iLjc1IiBzdGl0Y2hUaWxlcz0ic3RpdGNoIi8+PC9maWx0ZXI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsdGVyPSJ1cmwoI2EpIi8+PC9zdmc+')]"></div>
+        {/* Caption */}
+        <p className="mt-3 text-xs text-center text-[var(--color-gray)] italic">
+          Inspired by the cinematography of Satyajit Ray & Charlie Chaplin
+        </p>
+      </div>
+    );
+  }
+
+  // Fallback for studios without cinematic hero
+  return (
+    <div className="aspect-[4/3] lg:aspect-square bg-gradient-to-br from-[var(--color-navy)] via-[var(--color-navy-light)] to-[var(--color-orange)]/40 rounded-2xl flex items-center justify-center shadow-xl overflow-hidden relative">
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSA2MCAwIEwgMCAwIDAgNjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwwLjA1KSIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyaWQpIi8+PC9zdmc+')] opacity-50"></div>
+      <div className="text-center text-white relative z-10 px-6">
+        <div className="text-3xl md:text-4xl font-bold mb-2 drop-shadow-lg">{studio.name}</div>
+        <div className="text-white/70 flex items-center justify-center gap-2">
+          <LocationIcon />
+          {studio.location}
+        </div>
+      </div>
+    </div>
   );
 }
 
@@ -272,6 +320,10 @@ export default async function StudioPage({ params }: { params: Promise<{ slug: s
 
   return (
     <>
+      <Script
+        src="https://widget.senja.io/widget/0b535da2-0b14-4753-96ad-0fe587874445/platform.js"
+        strategy="afterInteractive"
+      />
       <Navigation />
       <main className="pt-32 pb-12">
         <article className="container">
@@ -288,14 +340,24 @@ export default async function StudioPage({ params }: { params: Promise<{ slug: s
             </Link>
           </div>
 
-          {/* Hero Section */}
-          <header className="mb-16 max-w-4xl">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[var(--color-navy)] mb-6 leading-[1.1]">
-              {studio.hook}
-            </h1>
-            <p className="text-xl md:text-2xl text-[var(--color-gray)] leading-relaxed max-w-3xl">
-              {studio.subhook}
-            </p>
+          {/* Hero Section - Split Layout */}
+          <header className="mb-16">
+            <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+              {/* Left: Text Content */}
+              <div className="order-2 lg:order-1">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[var(--color-navy)] mb-6 leading-[1.1]">
+                  {studio.hook}
+                </h1>
+                <p className="text-xl md:text-2xl text-[var(--color-gray)] leading-relaxed">
+                  {studio.subhook}
+                </p>
+              </div>
+
+              {/* Right: Cinematic Hero Image */}
+              <div className="order-1 lg:order-2">
+                <HeroImage studio={studio} />
+              </div>
+            </div>
           </header>
 
           {/* Glassmorphism Info Bar */}
@@ -387,6 +449,21 @@ export default async function StudioPage({ params }: { params: Promise<{ slug: s
             </div>
           </section>
 
+          {/* Transformation Quote */}
+          <section className="mb-16">
+            <div className="relative">
+              <div className="absolute -left-4 top-0 bottom-0 w-1 bg-gradient-to-b from-[var(--color-orange)] via-[var(--color-orange)]/50 to-transparent rounded-full"></div>
+              <blockquote className="pl-8 py-6">
+                <p className="text-2xl md:text-3xl font-medium text-[var(--color-navy)] leading-relaxed italic">
+                  &ldquo;Most studios spend 40% of their time on admin that AI could handle in minutes.
+                  <span className="block mt-3 text-lg md:text-xl text-[var(--color-gray)] not-italic font-normal">
+                    The ones who figure this out first will own the next decade.&rdquo;
+                  </span>
+                </p>
+              </blockquote>
+            </div>
+          </section>
+
           {/* Growth Opportunities */}
           <section className="mb-16">
             <div className="flex items-center gap-3 mb-3">
@@ -408,6 +485,23 @@ export default async function StudioPage({ params }: { params: Promise<{ slug: s
                 />
               ))}
             </div>
+          </section>
+
+          {/* Testimonials */}
+          <section className="mb-16">
+            <div className="flex items-center gap-3 mb-8">
+              <div className="w-1 h-8 bg-gradient-to-b from-[var(--color-orange)] to-transparent rounded-full"></div>
+              <h2 className="text-2xl md:text-3xl font-semibold text-[var(--color-navy)]">
+                What Others Are Saying
+              </h2>
+            </div>
+            <div
+              className="senja-embed"
+              data-id="0b535da2-0b14-4753-96ad-0fe587874445"
+              data-mode="shadow"
+              data-lazyload="false"
+              style={{ display: 'block', width: '100%' }}
+            />
           </section>
 
           {/* Personal Letter */}
