@@ -447,7 +447,7 @@ export default async function StudioPage({ params }: { params: Promise<{ slug: s
                 />
               </div>
 
-              <div className="flex flex-wrap gap-4 justify-center md:justify-start">
+              <div className="flex flex-wrap gap-4 justify-center md:justify-start text-slate-50">
                 <Link
                   href={WORKBOOK_BASE_URL}
                   target="_blank"
@@ -458,7 +458,7 @@ export default async function StudioPage({ params }: { params: Promise<{ slug: s
                 </Link>
                 <a
                   href={`mailto:jai@chaiwithjai.com?subject=Coffee%20re%3A%20${encodeURIComponent(studio.name)}&body=Hi%20Jai%2C%0A%0AI%20saw%20the%20page%20you%20put%20together%20for%20${encodeURIComponent(studio.name)}.%20Would%20love%20to%20grab%20coffee%20and%20hear%20more.%0A%0A${studio.contact.name}`}
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-[var(--color-navy)] text-slate-50 rounded-lg font-medium hover:bg-[var(--color-navy-light)] transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-[var(--color-navy)] rounded-lg font-medium hover:bg-[var(--color-navy-light)] transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5"
                 >
                   Let&apos;s Get Coffee
                   <ArrowRightIcon />
