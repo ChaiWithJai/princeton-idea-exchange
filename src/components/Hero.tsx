@@ -43,7 +43,7 @@ export default function Hero() {
         {cornerImages.map((img, index) => (
           <div
             key={index}
-            className={`absolute ${img.position} ${img.size} ${img.rotate} hidden lg:block`}
+            className={`absolute ${img.position} ${img.size} ${img.rotate}`}
           >
             <div
               className="relative w-full h-full rounded-2xl overflow-hidden"

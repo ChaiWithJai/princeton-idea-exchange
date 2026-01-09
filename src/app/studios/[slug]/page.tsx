@@ -97,7 +97,14 @@ function ArrowRightIcon() {
 }
 
 // Studios with cinematic hero images (Ray/Chaplin inspired)
-const CINEMATIC_HERO_STUDIOS = ['kvibe', 'loop', 'sip', 'ironbound'];
+const CINEMATIC_HERO_STUDIOS = [
+  '10-basin', '18-label', 'acx1', 'awakened', 'bb-props', 'big-sur',
+  'black-swallowtail', 'buttertree', 'cinelease', 'east-coast-post',
+  'hill-theater', 'hsad', 'hudson-river', 'ironbound', 'kvibe', 'loop',
+  'meadowlands', 'mediamix', 'mile-end', 'montclair-state', 'njf', 'odr',
+  'palisade', 'parlay', 'reliance', 'riverview', 'showman', 'silver-spoon',
+  'sip', 'stellar', 'sustainable', 'universal', 'wavelength', 'wreckd'
+];
 
 function HeroImage({ studio }: { studio: StudioData }) {
   const hasCinematicHero = CINEMATIC_HERO_STUDIOS.includes(studio.slug);
