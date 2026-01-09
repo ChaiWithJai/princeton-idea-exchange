@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { DM_Sans, Libre_Baskerville } from "next/font/google";
+import { DM_Sans, Libre_Baskerville, Caveat } from "next/font/google";
 import "./globals.css";
 
 const dmSans = DM_Sans({
@@ -15,6 +15,13 @@ const libreBaskerville = Libre_Baskerville({
   display: "swap",
   weight: ["400", "700"],
   style: ["normal", "italic"],
+});
+
+const caveat = Caveat({
+  subsets: ["latin"],
+  variable: "--font-handwritten",
+  display: "swap",
+  weight: ["400", "500", "600"],
 });
 
 export const metadata: Metadata = {
@@ -42,7 +49,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${dmSans.variable} ${libreBaskerville.variable}`}>
+    <html lang="en" className={`${dmSans.variable} ${libreBaskerville.variable} ${caveat.variable}`}>
       <body className="antialiased">
         {children}
       </body>
